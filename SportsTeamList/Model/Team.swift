@@ -18,3 +18,11 @@ class Team {
     self.rank = rank
     }
 } // End of Class
+
+extension Team: Equatable {
+    static func == (lhs: Team, rhs: Team) -> Bool {
+        return lhs.name == rhs.name &&
+        lhs.playerCount == rhs.playerCount &&
+        lhs.rank == rhs.rank
+    }
+}

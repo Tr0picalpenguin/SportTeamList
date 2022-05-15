@@ -19,15 +19,14 @@ class TeamController {
         teams.append(team)
     }
     
-    func update() {
-        
+    func update(teamtoUpdate: Team, name: String, playerCount: Int, rank: Int) {
+        teamtoUpdate.name = name
+        teamtoUpdate.playerCount = playerCount
+        teamtoUpdate.rank = rank
     }
     
-    func delete() {
-        
-    }
-    
-    
-    
-
+    func delete(teamToDelete: Team) {
+        guard let index = teams.firstIndex(of: teamToDelete) else {return}
+        teams.remove(at: index)
+        }
 } // End of Class
