@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED0854322831E86D007A6A8C /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0854312831E86D007A6A8C /* TeamTableViewCell.swift */; };
 		ED94841D283054ED0026E204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED94841C283054ED0026E204 /* AppDelegate.swift */; };
 		ED94841F283054ED0026E204 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED94841E283054ED0026E204 /* SceneDelegate.swift */; };
 		ED948424283054ED0026E204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED948422283054ED0026E204 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED0854312831E86D007A6A8C /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		ED948419283054ED0026E204 /* SportsTeamList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsTeamList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED94841C283054ED0026E204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED94841E283054ED0026E204 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED08542E2831E7E6007A6A8C /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				ED0854312831E86D007A6A8C /* TeamTableViewCell.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		ED948410283054ED0026E204 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 		ED94843D28319C840026E204 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ED08542E2831E7E6007A6A8C /* Subviews */,
 				ED94843E28319C9F0026E204 /* TeamController.swift */,
 			);
 			path = "Model Controller";
@@ -199,6 +210,7 @@
 				ED94841D283054ED0026E204 /* AppDelegate.swift in Sources */,
 				ED94841F283054ED0026E204 /* SceneDelegate.swift in Sources */,
 				ED94843C2831991F0026E204 /* Team.swift in Sources */,
+				ED0854322831E86D007A6A8C /* TeamTableViewCell.swift in Sources */,
 				ED94843F28319C9F0026E204 /* TeamController.swift in Sources */,
 				ED9484382830586C0026E204 /* SportListTableViewController.swift in Sources */,
 			);

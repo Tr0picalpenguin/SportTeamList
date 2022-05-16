@@ -21,19 +21,32 @@ class SportListDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
+    var teamReceiver: Team?
     
+    func updateViews(team: Team?) {
+        guard let team = team else {return}
+        teamNameTextField.text = team.name
+        playerCountTextField.text = String(team.playerCount)
+        teamRankTextField.text = String(team.rank)
+    }
     
-    
+    func resetViews() {
+        teamNameTextField.text = ""
+        playerCountTextField.text = ""
+        teamRankTextField.text = ""
+    }
     
     @IBAction func clearButtonTapped(_ sender: Any) {
+        resetView()
     }
+    
     @IBAction func deleteButtonTapped(_ sender: Any) {
     }
+    
     @IBAction func saveButtonTapped(_ sender: Any) {
+        
     }
     
     

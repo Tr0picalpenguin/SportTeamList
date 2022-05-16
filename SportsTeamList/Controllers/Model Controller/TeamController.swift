@@ -11,9 +11,9 @@ class TeamController {
     
     // MARK: - Singleton
     static let sharedInstance = TeamController()
-
+    
     var teams: [Team] = []
-
+    
     func createTeam(name: String, playerCount: Int, rank: Int) {
         let team = Team(name: name, playerCount: playerCount, rank: rank)
         teams.append(team)
@@ -28,5 +28,5 @@ class TeamController {
     func delete(teamToDelete: Team) {
         guard let index = teams.firstIndex(of: teamToDelete) else {return}
         teams.remove(at: index)
-        }
+    }
 } // End of Class
