@@ -27,8 +27,8 @@ class SportListTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? TeamTableViewCell else {return UITableViewCell() }
-        let teamEntry = TeamController.sharedInstance.team[indexPath.row]
+       guard let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? TeamTableViewCell else {return UITableViewCell() }
+        let teamEntry = TeamController.sharedInstance.teams[indexPath.row]
         cell.updateViews(for: teamEntry)
         return cell
         
@@ -36,8 +36,7 @@ class SportListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let teamToDelete = TeamController.sharedInstance.delete(teamToDelete: teamToDelete)
-            
+            let teamToDelete = TeamController.sharedInstance.teams[indexPath.row]; TeamController.sharedInstance.delete(teamToDelete: teamToDelete)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             

@@ -39,14 +39,23 @@ class SportListDetailViewController: UIViewController {
     }
     
     @IBAction func clearButtonTapped(_ sender: Any) {
-        resetView()
+       resetViews()
     }
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        
+        guard let name = teamNameTextField.text,
+        let playerCount = playerCountTextField.text,
+        let rank = teamRankTextField.text else {return}
+        if let team = teamReceiver {
+            TeamController.sharedInstance.update(teamtoUpdate: team, name: name, playerCount: Int(playerCount) ?? 0, rank: Int(rank) ?? 0)
+                 
+        } else {
+                TeamController.sharedInstance.createTeam(name: name, playerCount: Int(playerCount) ?? 0, rank: Int(rank) ?? 0)
+        }
+        navigationController?.popViewController(animated: true)
     }
     
     
