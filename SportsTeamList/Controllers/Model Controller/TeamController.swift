@@ -12,8 +12,10 @@ class TeamController {
     // MARK: - Singleton
     static let sharedInstance = TeamController()
     
+    // MARK: - Collection
     var teams: [Team] = []
     
+    // MARK: - CRUD functions
     func createTeam(name: String, playerCount: Int, rank: Int) {
         let team = Team(name: name, playerCount: playerCount, rank: rank)
         teams.append(team)

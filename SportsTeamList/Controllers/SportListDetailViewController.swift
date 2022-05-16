@@ -18,7 +18,7 @@ class SportListDetailViewController: UIViewController {
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -39,10 +39,11 @@ class SportListDetailViewController: UIViewController {
     }
     
     @IBAction func clearButtonTapped(_ sender: Any) {
-       resetViews()
+        resetViews()
     }
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
+        
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
@@ -50,21 +51,13 @@ class SportListDetailViewController: UIViewController {
         let playerCount = playerCountTextField.text,
         let rank = teamRankTextField.text else {return}
         if let team = teamReceiver {
+            // Update
             TeamController.sharedInstance.update(teamtoUpdate: team, name: name, playerCount: Int(playerCount) ?? 0, rank: Int(rank) ?? 0)
-                 
         } else {
-                TeamController.sharedInstance.createTeam(name: name, playerCount: Int(playerCount) ?? 0, rank: Int(rank) ?? 0)
+            // Create
+            TeamController.sharedInstance.createTeam(name: name, playerCount: Int(playerCount) ?? 0, rank: Int(rank) ?? 0)
         }
         navigationController?.popViewController(animated: true)
     }
-    
-    
-    
-
-    
-    // MARK: - Navigation
-
- 
-
 } // End of Class
 

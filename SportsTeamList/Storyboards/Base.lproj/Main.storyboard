@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Woi-g6-vpT">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="Woi-g6-vpT" customClass="TeamTableViewCell" customModule="SportsTeamList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="53.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Woi-g6-vpT" id="uQq-Ti-Yam">
@@ -65,6 +65,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="playerCountLabel" destination="2Ga-DY-plW" id="W5a-IS-TRN"/>
+                                    <outlet property="teamNameLabel" destination="l0D-0c-X5Y" id="g5k-7b-gw8"/>
+                                    <outlet property="teamRankLabel" destination="c63-oP-Bs4" id="1WC-z6-hzf"/>
                                     <segue destination="Aek-Q4-bWg" kind="show" identifier="toDetailVC" id="ZJb-iG-yZe"/>
                                 </connections>
                             </tableViewCell>
@@ -232,7 +235,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZJb-iG-yZe"/>
+        <segue reference="8T0-ag-pOn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

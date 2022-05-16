@@ -27,7 +27,7 @@ class SportListTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       guard let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? TeamTableViewCell else {return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? TeamTableViewCell else {return UITableViewCell() }
         let teamEntry = TeamController.sharedInstance.teams[indexPath.row]
         cell.updateViews(for: teamEntry)
         return cell
@@ -43,21 +43,21 @@ class SportListTableViewController: UITableViewController {
         }
     }
     
-
-     // MARK: - Navigation
-     
     
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         if segue.identifier == "toDetailVC" {
-             if let index = tableView.indexPathForSelectedRow {
-                 if let destination = segue.destination as? SportListDetailViewController {
-                     let teamToPass = TeamController.sharedInstance.teams[index.row]
-                     destination.teamReceiver = teamToPass
-                 }
-             }
-         }
-     }
- 
+    // MARK: - Navigation
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailVC" {
+            if let index = tableView.indexPathForSelectedRow {
+                if let destination = segue.destination as? SportListDetailViewController {
+                    let teamToPass = TeamController.sharedInstance.teams[index.row]
+                    destination.teamReceiver = teamToPass
+                }
+            }
+        }
+    }
+    
     
 }
 
