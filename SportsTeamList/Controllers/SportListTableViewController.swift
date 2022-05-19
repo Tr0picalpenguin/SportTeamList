@@ -27,7 +27,7 @@ class SportListTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? TeamTableViewCell else {return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "teamInfoCell", for: indexPath) as? TeamTableViewCell else {return UITableViewCell() }
         let teamEntry = TeamController.sharedInstance.teams[indexPath.row]
         cell.updateViews(for: teamEntry)
         return cell
@@ -59,5 +59,5 @@ class SportListTableViewController: UITableViewController {
     }
     
     
-}
+} // End of class
 

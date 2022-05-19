@@ -21,12 +21,15 @@ class SportListDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateViews()
     }
     
     var teamReceiver: Team?
     
-    func updateViews(team: Team?) {
-        guard let team = team else {return}
+  
+    
+    func updateViews() {
+        guard let team = teamReceiver else {return}
         teamNameTextField.text = team.name
         playerCountTextField.text = String(team.playerCount)
         teamRankTextField.text = String(team.rank)

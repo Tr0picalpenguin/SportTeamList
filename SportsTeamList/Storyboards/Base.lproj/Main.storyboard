@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="Woi-g6-vpT" customClass="TeamTableViewCell" customModule="SportsTeamList" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamInfoCell" id="Woi-g6-vpT" customClass="TeamTableViewCell" customModule="SportsTeamList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="53.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Woi-g6-vpT" id="uQq-Ti-Yam">
@@ -26,7 +26,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="240" translatesAutoresizingMaskIntoConstraints="NO" id="WFA-3c-ErX">
-                                            <rect key="frame" x="2" y="2" width="410" height="49.5"/>
+                                            <rect key="frame" x="16" y="2" width="382" height="49.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="74f-PK-7C0">
                                                     <rect key="frame" x="0.0" y="0.0" width="94" height="49.5"/>
@@ -49,7 +49,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c63-oP-Bs4">
-                                                    <rect key="frame" x="334" y="0.0" width="76" height="49.5"/>
+                                                    <rect key="frame" x="334" y="0.0" width="48" height="49.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -60,8 +60,8 @@
                                     <constraints>
                                         <constraint firstItem="WFA-3c-ErX" firstAttribute="top" secondItem="uQq-Ti-Yam" secondAttribute="top" constant="2" id="0IW-f9-x4a"/>
                                         <constraint firstAttribute="bottom" secondItem="WFA-3c-ErX" secondAttribute="bottom" constant="2" id="6eL-QU-quZ"/>
-                                        <constraint firstItem="WFA-3c-ErX" firstAttribute="leading" secondItem="uQq-Ti-Yam" secondAttribute="leading" constant="2" id="FcP-n3-FQp"/>
-                                        <constraint firstAttribute="trailing" secondItem="WFA-3c-ErX" secondAttribute="trailing" constant="2" id="fgf-PJ-AK5"/>
+                                        <constraint firstItem="WFA-3c-ErX" firstAttribute="leading" secondItem="uQq-Ti-Yam" secondAttribute="leading" constant="16" id="FcP-n3-FQp"/>
+                                        <constraint firstAttribute="trailing" secondItem="WFA-3c-ErX" secondAttribute="trailing" constant="16" id="fgf-PJ-AK5"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
