@@ -7,15 +7,15 @@
 
 import Foundation
 
-class Team {
+class Team: Codable {
     var name: String
     var playerCount: Int
     var rank: Int
     
     init(name: String, playerCount: Int, rank: Int) {
-    self.name = name
-    self.playerCount = playerCount
-    self.rank = rank
+        self.name = name
+        self.playerCount = playerCount
+        self.rank = rank
     }
 } // End of Class
 

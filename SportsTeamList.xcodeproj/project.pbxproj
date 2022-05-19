@@ -95,6 +95,7 @@
 		ED9484312830558B0026E204 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ED08542E2831E7E6007A6A8C /* Subviews */,
 				ED94843D28319C840026E204 /* Model Controller */,
 				ED9484372830586C0026E204 /* SportListTableViewController.swift */,
 				ED948439283058940026E204 /* SportListDetailViewController.swift */,
@@ -129,7 +130,6 @@
 		ED94843D28319C840026E204 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
-				ED08542E2831E7E6007A6A8C /* Subviews */,
 				ED94843E28319C9F0026E204 /* TeamController.swift */,
 			);
 			path = "Model Controller";

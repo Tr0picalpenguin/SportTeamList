@@ -19,12 +19,10 @@ class SportListTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return TeamController.sharedInstance.teams.count
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "teamInfoCell", for: indexPath) as? TeamTableViewCell else {return UITableViewCell() }
@@ -36,17 +34,15 @@ class SportListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let teamToDelete = TeamController.sharedInstance.teams[indexPath.row]; TeamController.sharedInstance.delete(teamToDelete: teamToDelete)
+            let teamToDelete = TeamController.sharedInstance.teams[indexPath.row]
+            TeamController.sharedInstance.delete(teamToDelete: teamToDelete)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             
         }
     }
-    
-    
+
     // MARK: - Navigation
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailVC" {
             if let index = tableView.indexPathForSelectedRow {
@@ -57,7 +53,5 @@ class SportListTableViewController: UITableViewController {
             }
         }
     }
-    
-    
 } // End of class
 

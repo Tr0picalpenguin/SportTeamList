@@ -26,8 +26,6 @@ class SportListDetailViewController: UIViewController {
     
     var teamReceiver: Team?
     
-  
-    
     func updateViews() {
         guard let team = teamReceiver else {return}
         teamNameTextField.text = team.name
@@ -46,13 +44,16 @@ class SportListDetailViewController: UIViewController {
     }
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
+        guard let teamReceiver = teamReceiver else { return }
+        
+        TeamController.sharedInstance.delete(teamToDelete: teamReceiver)
         
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let name = teamNameTextField.text,
-        let playerCount = playerCountTextField.text,
-        let rank = teamRankTextField.text else {return}
+              let playerCount = playerCountTextField.text,
+              let rank = teamRankTextField.text else {return}
         if let team = teamReceiver {
             // Update
             TeamController.sharedInstance.update(teamtoUpdate: team, name: name, playerCount: Int(playerCount) ?? 0, rank: Int(rank) ?? 0)
